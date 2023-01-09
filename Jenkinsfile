@@ -16,7 +16,7 @@ pipeline{
               
                stage('junit') {
                          steps{
-                            sh 'mvn complier:testCompile'
+                            sh 'mvn compiler:testCompile'
                             sh 'mvn surefire:test'
                             junit 'target/**/*.xml'
                              }
