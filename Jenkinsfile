@@ -23,7 +23,7 @@ pipeline{
                      }
                stage('Deployment') {
                       steps{
-                           sh 'sshpass -p "Ag" scp tagert/gamutgurus.war AG@172.17.0.3:/home/AG/apache-tomcat-9.0.70/webapps'
+                           sh 'sshpass -p "Ag" scp target/gamutgurus.war AG@172.17.0.3:/home/AG/apache-tomcat-9.0.70/webapps'
                            sh 'sshpass -p "Ag" ssh AG@172.17.0.3 "/home/AG/apache-tomcat-9.0.70/bin/startup.sh" '
                   } 
            }
